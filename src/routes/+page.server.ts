@@ -1,10 +1,11 @@
 import type { Actions } from './$types';
 import { SerialPort } from 'serialport'
-import { PATH } from "$env/static/private";
+import { SERIAL_PATH } from "$env/static/private";
 
+console.log(SERIAL_PATH);
 
 const port = new SerialPort({
-    path: "/dev/serial/by-id/usb-Arduino_LLC_Arduino_Leonardo-if00",
+    path: SERIAL_PATH,
     baudRate: 9600
 });
 
